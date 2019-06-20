@@ -7,6 +7,7 @@ class ScoresController < ApplicationController
 
   def create
     score = Score.create(params.permit(:player, :game_id, :score))
+    render json: score
   end
 
 end
